@@ -33,6 +33,28 @@ Posts
 post = models.ForeignKey('post_app.Posts', related_name="comments")
 ```
 
+## Foreign Key v Reverse Access 
+* One way pointer:
+Foreign Key --> comment.post -> parent Post
+
+* Reverse relationship (reverse access)
+related_name = "comments" : Posts -> comments
+
+equivalent to : "Get me all the comments of this Post 
+```
+post.comments.all()
+
+```
+
+related_name = "posts"
+
+"Get me all the posts made by this user"
+```
+user.posts.all()
+
+```
+
+
 
 
 
