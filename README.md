@@ -53,8 +53,11 @@ related_name = "posts"
 user.posts.all()
 
 ```
-
-
+| Relationship | related_name | Reads as |
+| --- | --- | --- |
+| User → Posts | `posts` | user.posts |
+| User → Comments | `comments` | user.comments |
+| Post → Comments | `comments` | post.comments |
 
 
 
