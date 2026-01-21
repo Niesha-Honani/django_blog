@@ -7,9 +7,9 @@
 
 ## Relationships 
 - BlogUser --> Posts (One to Many)
-'''
+```
 author = models.ForeignKey('user_app.BlogUser', related_name="posts")
-'''
+```
 
 - Blog User --> Comments (One to Many)
 - Post -- > Comments (One to Many)
