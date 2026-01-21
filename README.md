@@ -59,6 +59,14 @@ user.posts.all()
 | User → Comments | `comments` | user.comments |
 | Post → Comments | `comments` | post.comments |
 
+## admin.py - Register Models not Apps
+| Thing	| Where it goes |	Why |
+| --- | --- | --- |
+| App |	INSTALLED_APPS | Django loads it |
+| Model | models.py | Defines schema |
+| Migration | migrations/ | Creates DB tables |
+| Admin registration | admin.py | Makes model visible in admin |
+
 
 
 

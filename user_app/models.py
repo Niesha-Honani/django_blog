@@ -9,5 +9,5 @@ class BlogUser(models.Model):
     date_joined = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Blog User {self.username}"
+        return f"Blog User: {self.username} - {self.email} - Joined on {self.date_joined}"
      

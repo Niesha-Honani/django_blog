@@ -7,7 +7,7 @@ class Comments(models.Model):
     post = models.ForeignKey('post_app.Posts', on_delete=models.CASCADE, related_name='comments')
     # Many Comments --> One Blog User
     author = models.ForeignKey('user_app.BlogUser', on_delete=models.CASCADE, related_name='comments')
-    content = models.TextField()
+    content = models.TextField(max_length=255,null=False, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
