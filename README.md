@@ -12,7 +12,13 @@ author = models.ForeignKey('user_app.BlogUser', related_name="posts")
 ```
 
 - Blog User --> Comments (One to Many)
+```
+author = models.ForeignKey('user_app.BlogUser', related_name = "comments" )
+```
 - Post -- > Comments (One to Many)
+```
+post = models.ForeignKey('post_app.Posts', related_name="comments")
+```
 
 BlogUser
  ├── posts (1 → many)
