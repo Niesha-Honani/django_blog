@@ -2,17 +2,24 @@
 from django.test import TestCase
 from django.core.exceptions import ValidationError
 from post_app.models import Posts
+from user_app.models import BlogUser
 
 
 # Create your tests here.
 class PostsTests(TestCase):
     ''' Test cases for Posts model '''
+   
     def test_valid_post(self):
         ''' Method to test valid post '''
+        #pylint: disable=no-member
+        author = BlogUser.objects.create(
+            username='testuser22',
+            email = 'testuser22@example.com',
+        )
         post = Posts(
             title="A Valid Title",
             content="This is a valid content with more than ten characters.",
-            author_id= 1  # Assuming a BlogUser with ID 1 exists
+            author_id= author.id
         )
         post.full_clean()  # This will run the validators
         post.save()
