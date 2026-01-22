@@ -63,6 +63,9 @@ user.posts.all()
 | User → Comments | `comments` | user.comments |
 | Post → Comments | `comments` | post.comments |
 
+[### More On Related Names, Foreign Keys and Models](
+    https://www.notion.so/Django-Related-Names-Foreign-Keys-Models-2eff93b2f80080eda8f3ccc6e8a88a4e?source=copy_link
+)
 ## admin.py - Register Models not Apps
 | Thing	| Where it goes |	Why |
 | --- | --- | --- |
