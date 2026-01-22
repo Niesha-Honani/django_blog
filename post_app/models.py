@@ -3,9 +3,7 @@ from django.db import models
 from .validators import(
     validate_empty_title,
     validate_title_length,
-    validate_content_length,
-    validate_not_utc_time,
-)
+    validate_content_length)
 # Create your models here
 class Posts(models.Model):
     """ Model representing a blog post """
@@ -19,8 +17,7 @@ class Posts(models.Model):
 
     author = models.ForeignKey('user_app.BlogUser', on_delete=models.CASCADE, related_name='posts')
     created_at = models.DateTimeField(
-        auto_now_add=True,
-        validators=[validate_not_utc_time])
+        auto_now_add=True)
 
     def __str__(self):
         return f"Post: {self.title} by {self.author}"
