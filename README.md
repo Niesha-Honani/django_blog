@@ -1,4 +1,8 @@
 # BLOG API
+* Reference : Setup in [SCHOOL_API](https://github.com/Niesha-Honani/School-API)
+
+* Notes on Build, Relationships and other stuff below to reference
+
 ## Build List
 
 - user_app -> user model
